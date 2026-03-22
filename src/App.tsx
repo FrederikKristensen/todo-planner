@@ -1,10 +1,13 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import TaskCard from './components/TaskCard';
+import Home from './pages/Home';
 
 function App() {
   return (
     <>
-      <TaskCard />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
