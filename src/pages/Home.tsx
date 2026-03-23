@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import TaskCard from '../components/TaskCard';
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
   const [inputValue, setInputValue] = useState<string>('');
 
   // Our function to handle the submit value
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (inputValue.trim()) {
       setTasks([...tasks, inputValue]);
