@@ -27,7 +27,11 @@ const Home = () => {
         />
         <button type="submit">Add</button>
       </form>
-      <TaskCard />
+      <div>
+        {tasks.map((task, index) => (
+          <TaskCard key={index} task={task} />
+        ))}
+      </div>
     </div>
   );
 };

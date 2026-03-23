@@ -1,9 +1,11 @@
-// TODO add a interface for tasks
+interface TaskCardProps {
+  task: string;
+}
 
-const TaskCard = () => {
+const TaskCard = ({ task }: TaskCardProps) => {
   return (
     <div>
-      TaskCard
+      <p>{task}</p>
     </div>
   );
 };
