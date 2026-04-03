@@ -17,16 +17,17 @@ const Home = () => {
 
   return (
     <div>
-      <div>Home</div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="I have to do..."
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <button type="submit">Add</button>
-      </form>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="To do..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+          <button type="submit">Add</button>
+        </form>
+      </div>
       <div>
         {tasks.map((task, index) => (
           <TaskCard key={index} task={task} />

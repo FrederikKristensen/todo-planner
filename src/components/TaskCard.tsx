@@ -12,7 +12,7 @@ const TaskCard = ({ task }: TaskCardProps) => {
   };
 
   return (
-    <div>
+    <div className="bg-neutral-600">
       <button onClick={toggleCheck}>{checked ? 'Done' : 'todo'}</button>
       <p>{task}</p>
     </div>
